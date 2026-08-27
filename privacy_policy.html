@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>개인정보처리방침</title>
+<style>
+  body { font-family: "Apple SD Gothic Neo", "Malgun Gothic", sans-serif; line-height: 1.7; color: #222; background: #fff; max-width: 760px; margin: 0 auto; padding: 24px 20px 64px; }
+  h1 { font-size: 1.5rem; border-bottom: 2px solid #444; padding-bottom: 8px; }
+  h2 { font-size: 1.15rem; margin-top: 2em; border-left: 4px solid #888; padding-left: 10px; }
+  h3 { font-size: 1rem; margin-top: 1.5em; }
+  .meta { color: #555; font-size: 0.9rem; background: #f6f6f6; border-radius: 8px; padding: 12px 16px; }
+  .meta li { margin: 2px 0; }
+  strong { color: #111; }
+  table { border-collapse: collapse; width: 100%; margin: 1em 0; font-size: 0.95rem; }
+  th, td { border: 1px solid #ddd; padding: 8px 10px; text-align: left; vertical-align: top; }
+  th { background: #f6f6f6; color: #111; }
+  code { background: #f2f2f2; border-radius: 4px; padding: 1px 5px; font-size: 0.9em; }
+  .wrap { overflow-x: auto; }
+</style>
+</head>
+<body>
+<h1>개인정보처리방침</h1>
+
+<ul class="meta">
+  <li>적용 서비스: 운명의마을 (구글 플레이 안드로이드 앱 · 웹 버전)</li>
+  <li>패키지 ID: <code>com.saramui.tarot</code></li>
+  <li>시행일: 2026-08-28</li>
+  <li>문의: <a href="mailto:love846234@gmail.com">love846234@gmail.com</a></li>
+</ul>
+
+<h2>1. 개요</h2>
+<p><strong>운명의마을</strong>(이하 "본 서비스")은 하나의 마을 화면 안에서 여러 상담 코너를 오가는 앱입니다. 지금 제공하는 코너는 다음과 같습니다.</p>
+<div class="wrap"><table>
+<tr><th>코너</th><th>이용자가 넣는 것</th><th>어디서 처리되나</th></tr>
+<tr><td><strong>타로 리딩</strong> (오늘의 카드 · 대화형 리딩 · 스프레드)</td><td>고민 텍스트</td><td>카드 뽑기는 기기 안 · 해석은 서버 경유 AI</td></tr>
+<tr><td><strong>사주풀이 · 사주 궁합</strong></td><td>생년월일(시) · 성별 · 고민 텍스트 (<strong>궁합은 상대방의 생년월일(시)·성별도</strong>)</td><td>사주 계산은 서버 자체 로직 · 해석은 서버 경유 AI</td></tr>
+<tr><td><strong>토정비결</strong></td><td>생년월일 · 고민 텍스트</td><td>괘 계산은 서버 자체 로직 · 해석은 서버 경유 AI</td></tr>
+<tr><td><strong>관상 · 손금</strong></td><td>얼굴 또는 손 <strong>사진</strong> · 고민 텍스트</td><td>사진 보정은 기기 안 · 해석은 서버 경유 AI</td></tr>
+<tr><td><strong>MBTI 궁합 · MBTI 심리테스트</strong></td><td>16유형 선택값 · 선택지 답변 · 고민 텍스트</td><td>해석은 서버 경유 AI</td></tr>
+<tr><td><strong>운명의 놀이터</strong> (미니 상담 · 미니 테스트)</td><td>선택지 답변 · 고민 텍스트</td><td>해석은 서버 경유 AI</td></tr>
+<tr><td><strong>운명의 마을</strong> (NPC 대화 · 미니미 · 낮밤)</td><td>없음</td><td><strong>전부 기기 안</strong></td></tr>
+<tr><td><strong>은화</strong>(앱 안에서만 쓰는 재화) · 리딩 기록 · 알림</td><td>없음</td><td><strong>전부 기기 안</strong></td></tr>
+</table></div>
+<p>본 방침은 이용자가 본 서비스를 이용하며 어떤 정보가 어떻게 처리되는지 설명합니다.</p>
+
+<h2>2. 계정을 만들지 않습니다</h2>
+<p>본 서비스는 <strong>회원가입·로그인이 없습니다.</strong> 이름·이메일·전화번호·주소 등 이용자를 특정할 수 있는 정보를 요구하지 않고, 소셜 로그인도 쓰지 않습니다. 따라서 본 서비스는 이용자의 입력을 <strong>특정 개인과 연결해 두지 않습니다</strong> — 아래에서 "수집"이라고 적은 것은 전부 [그 요청을 처리하는 동안] 다루는 값이라는 뜻입니다.</p>
+
+<h2>3. 수집하는 정보</h2>
+
+<h3>3-1. 기기 안에서만 처리되고 밖으로 나가지 않는 것</h3>
+<p>아래 값은 이용자 기기의 브라우저 저장소(localStorage)에만 저장되며 서버로 전송되지 않습니다. 앱을 삭제하거나 앱 데이터를 지우면 함께 사라집니다.</p>
+<div class="wrap"><table>
+<tr><th>저장 키</th><th>무엇</th></tr>
+<tr><td><code>tarotReadingHistory</code></td><td><strong>리딩 기록 최대 20건</strong> — 뽑은 카드 · 이용자가 적은 고민 텍스트 · AI 해석 · 시각</td></tr>
+<tr><td><code>tarotCoinBalance</code> · <code>tarotCoinRemainMs</code></td><td>은화 잔액 · 은화 회복까지 남은 시간</td></tr>
+<tr><td><code>tarotStreakCount</code> · <code>tarotStreakLastDate</code></td><td>연속 접속 일수 · 마지막 접속 날짜</td></tr>
+<tr><td><code>tarotShareAdCount_&lt;날짜&gt;</code></td><td>그날 보상형 광고를 본 횟수(하루 3회 제한 계산용)</td></tr>
+<tr><td><code>tarotVillageNight</code> · <code>tarotVillageDNMode</code> · <code>tarotGameTimeEpoch</code> · <code>tarotGameTimePhaseSec</code> · <code>tarotSceneStack</code></td><td>마을의 낮밤 · 화면 이동 상태</td></tr>
+<tr><td><code>ai_base_last_good</code></td><td>지난번에 연결에 성공한 서버 주소(개인정보 아님)</td></tr>
+</table></div>
+<p>카드를 뽑는 난수, 마을의 NPC·미니미 움직임, 손금·관상 사진의 밝기·대비 보정은 <strong>전부 기기 안에서만</strong> 이루어집니다. 사진 보정은 외부 라이브러리 없이 앱 자체 코드로 처리합니다.</p>
+
+<h3>3-2. 해석을 만들기 위해 서버로 전송되는 것</h3>
+<p>본 서비스의 해석은 <strong>미국 Anthropic, PBC 의 Claude API</strong>(모델 <code>claude-haiku-4-5</code>)가 생성합니다. 앱은 Claude 를 직접 부르지 않고, 운영자가 관리하는 <strong>중계 서버</strong>를 한 번 거칩니다(API 키를 앱에 넣지 않기 위한 구조입니다). 앱↔중계 서버, 중계 서버↔Claude API 구간은 모두 HTTPS 로 암호화됩니다.</p>
+<div class="wrap"><table>
+<tr><th>코너</th><th>중계 서버로 보내는 값</th><th>그중 Claude API 로 다시 보내는 값</th></tr>
+<tr><td>타로 리딩</td><td>고민 텍스트(최대 500자) · 뽑힌 카드 · 최근 대화 4턴</td><td>같음</td></tr>
+<tr><td>사주풀이</td><td><strong>생년월일(시, 선택) · 성별</strong></td><td><strong>생년월일 원본은 보내지 않습니다.</strong> 서버가 계산한 사주 네 기둥(년주·월주·일주·시주)·오행 분포 요약과 성별, 그리고 고민 텍스트만 보냅니다</td></tr>
+<tr><td>사주 궁합</td><td>본인과 <strong>상대방</strong>의 생년월일(시)·성별</td><td>위와 같음 — 양쪽의 계산 결과 요약만 보냅니다</td></tr>
+<tr><td>토정비결</td><td><strong>생년월일</strong> · 보고 싶은 연도</td><td>생년월일 원본은 보내지 않습니다. 계산된 괘와 고민 텍스트만 보냅니다</td></tr>
+<tr><td>관상 · 손금</td><td><strong>얼굴 또는 손 사진</strong>(기기에서 보정·축소한 것) · 고민 텍스트</td><td><strong>사진 원본이 그대로 전달됩니다</strong>(이미지 입력)</td></tr>
+<tr><td>MBTI 궁합</td><td>본인 유형 · 상대 유형 · 고민 텍스트</td><td>같음</td></tr>
+<tr><td>MBTI 심리테스트 · 운명의 놀이터</td><td>테스트 식별자 · 선택지 답변 · 고민 텍스트</td><td>같음</td></tr>
+</table></div>
+<p><strong>사진에 대한 두 가지 약속</strong></p>
+<ol>
+<li><strong>사전 동의 없이는 요청이 나가지 않습니다.</strong> 관상·손금 화면에서 동의 체크를 하지 않으면 업로드 버튼 자체가 동작하지 않습니다.</li>
+<li><strong>사진은 저장되지 않습니다.</strong> 중계 서버는 사진을 요청을 처리하는 동안만 메모리에 두고, 디스크·데이터베이스 어디에도 기록하지 않으며 응답을 만든 뒤 즉시 버립니다. 이어지는 대화 맥락에는 사진이 아니라 <strong>텍스트 요약만</strong> 남으므로 같은 사진이 다시 전송되거나 쌓이지 않습니다.</li>
+</ol>
+<p>관상·손금은 전통 관상학·수상학 틀을 참고한 <strong>오락 목적의 해석</strong>이며 의학적 진단이 아닙니다.</p>
+
+<h3>3-3. 광고 — Google AdMob</h3>
+<p>앱(안드로이드) 버전에는 <strong>Google AdMob</strong> 광고가 들어 있습니다. 웹 버전에는 광고가 없습니다.</p>
+<div class="wrap"><table>
+<tr><th>형태</th><th>언제</th></tr>
+<tr><td>배너</td><td>화면 하단 고정</td></tr>
+<tr><td>전면</td><td>리딩을 한 번 끝냈을 때</td></tr>
+<tr><td>보상형</td><td>결과를 공유하거나 이어보기를 할 때, 은화를 쓰는 대신 광고를 보고 무료로 진행하는 선택지(하루 3회)</td></tr>
+</table></div>
+<p>AdMob 은 <strong>광고 식별자(Advertising ID)</strong>, 기기 정보, 대략적 위치 등을 표준적으로 수집하며 목적은 광고 게재와 노출 빈도 제한입니다. 보상형 광고의 경우 <strong>시청 완료 여부</strong>(보상을 줄지 판단하기 위한 값)도 함께 처리됩니다. 이 값들은 본 서비스가 아니라 Google 이 수집·이용하며, Google 의 처리 방침은 Google 광고 정책을 따릅니다. 이 앱은 광고 식별자를 쓰기 위해 <code>com.google.android.gms.permission.AD_ID</code> 권한을 선언합니다(8항).</p>
+
+<h3>3-4. AI 해석 신고 기능</h3>
+<p>AI 가 만든 해석이 부적절하다고 느낄 때 신고할 수 있는 버튼이 각 해석 화면에 있습니다. 신고를 보내면 <strong>신고한 해석 본문(최대 1,000자) · 신고 사유 · 접속 IP 주소 · 시각</strong>이 운영자 PC 의 <strong>서버 로그 파일에 기록됩니다.</strong> 이것은 5항에서 말하는 [보관하지 않는다]의 <strong>유일한 예외</strong>입니다 — 신고는 사람이 나중에 읽고 판단해야 하는 것이라 남깁니다. 자동으로 차단하거나 이용자를 식별하는 데 쓰지 않습니다.</p>
+<p>또한 요청이 몰리는 것을 막기 위해(10분 20회) 접속 IP 가 <strong>서버 메모리에 10분 동안만</strong> 남고 그 뒤 사라집니다. 파일에 기록되지 않습니다.</p>
+
+<h2>4. 제3자 제공·처리위탁</h2>
+<div class="wrap"><table>
+<tr><th>받는 곳</th><th>무엇을</th><th>왜</th><th>어디서</th></tr>
+<tr><td><strong>Anthropic, PBC</strong> (Claude API)</td><td>3-2 표의 오른쪽 칸 — 고민 텍스트 · 사주/토정비결 <strong>계산 결과 요약</strong> · MBTI 유형 · <strong>관상·손금 사진 원본</strong></td><td>해석 문장을 생성하기 위해</td><td>미국</td></tr>
+<tr><td><strong>Google</strong> (AdMob)</td><td>광고 식별자 · 기기 정보 · 대략적 위치 · 보상형 광고 시청 완료 여부</td><td>광고 게재와 빈도 제한</td><td>Google 광고 네트워크</td></tr>
+<tr><td><strong>이용자가 직접 고른 앱</strong></td><td>이용자가 [공유] 버튼을 눌렀을 때 그 결과 <strong>텍스트</strong></td><td>이용자가 카카오톡·문자 등으로 결과를 보내기 위해</td><td>이용자 선택</td></tr>
+</table></div>
+<p>그 외의 제3자 제공은 없습니다. 본 서비스는 어떤 정보도 판매하지 않습니다. 공유는 <strong>이용자가 버튼을 누른 그 순간에만</strong> 일어나며, 어느 앱으로 보낼지는 이용자가 고릅니다.</p>
+
+<h2>5. 보관 및 파기</h2>
+<div class="wrap"><table>
+<tr><th>무엇</th><th>어디에</th><th>얼마나</th></tr>
+<tr><td>리딩 기록 · 은화 · 마을 상태 (3-1)</td><td><strong>이용자 기기</strong></td><td>이용자가 지울 때까지(리딩 기록은 최신 20건만 유지)</td></tr>
+<tr><td>고민 텍스트 · 생년월일(시) · 성별 · MBTI 유형 · 사진 (3-2)</td><td>중계 서버</td><td><strong>보관하지 않음</strong> — 요청-응답 처리 중에만 메모리에 있고 응답 뒤 폐기. 디스크·데이터베이스 기록 없음</td></tr>
+<tr><td>신고 내용 · 접속 IP (3-4)</td><td>운영자 PC 의 서버 로그 파일</td><td>운영자가 확인·정리할 때까지</td></tr>
+<tr><td>요청 빈도 계산용 IP (3-4)</td><td>중계 서버 메모리</td><td><strong>10분</strong></td></tr>
+<tr><td>광고 관련 값 (3-3)</td><td>Google</td><td>Google 정책에 따름</td></tr>
+</table></div>
+<p><strong>기기에 저장된 것을 지우는 방법</strong>: 안드로이드 [설정 → 애플리케이션 → 운명의마을 → 저장공간 → 데이터 삭제] 또는 앱 삭제. 웹 버전은 브라우저의 사이트 데이터 삭제.</p>
+
+<h2>6. 이용자의 권리</h2>
+<p>본 서비스는 계정을 만들지 않고 입력값을 개인과 연결해 보관하지 않으므로, 서버 쪽에는 열람·정정·삭제를 요청할 대상 데이터가 원칙적으로 없습니다. 기기에 저장된 것은 5항의 방법으로 이용자가 직접, 즉시 지울 수 있습니다.</p>
+<p>다만 <strong>신고 기록(3-4)</strong> 은 예외적으로 남으므로, 본인이 보낸 신고의 삭제를 원하시면 위 <strong>문의</strong> 주소로 신고한 시각을 알려 주시면 해당 기록을 지웁니다. 그 밖의 개인정보 관련 문의도 같은 주소로 받습니다.</p>
+
+<h2>7. 아동의 개인정보</h2>
+<p>본 서비스는 만 14세 미만 아동을 주 이용층으로 하지 않으며, 아동으로부터 개인정보를 별도로 수집하지 않습니다. 연령 등급은 Play 콘솔에서 발급받은 등급을 따릅니다.</p>
+
+<h2>8. 앱이 요구하는 권한</h2>
+<div class="wrap"><table>
+<tr><th>권한</th><th>왜 필요한가</th><th>어디서 왔나</th></tr>
+<tr><td><code>INTERNET</code> · <code>ACCESS_NETWORK_STATE</code></td><td>해석 요청과 광고를 불러오기 위해</td><td>앱 · 광고 SDK</td></tr>
+<tr><td><code>POST_NOTIFICATIONS</code> · <code>SCHEDULE_EXACT_ALARM</code> · <code>RECEIVE_BOOT_COMPLETED</code> · <code>WAKE_LOCK</code></td><td><strong>기기 안에서만 뜨는</strong> 하루 한 번 알림("오늘의 카드를 아직 안 뽑았어요")을 예약하기 위해. 알림 내용은 기기 밖으로 나가지 않고, 푸시 서버를 쓰지 않습니다</td><td>로컬 알림 플러그인</td></tr>
+<tr><td><code>com.google.android.gms.permission.AD_ID</code> · <code>ACCESS_ADSERVICES_AD_ID</code> · <code>ACCESS_ADSERVICES_ATTRIBUTION</code> · <code>ACCESS_ADSERVICES_TOPICS</code></td><td>광고 식별자 사용(3-3)</td><td>광고 SDK</td></tr>
+</table></div>
+<p><strong>카메라 권한은 요구하지 않습니다.</strong> 관상·손금에서 사진을 찍을 때는 안드로이드 기본 카메라 앱을 잠깐 여는 방식이라 앱이 카메라를 직접 쥐지 않습니다. 위치·연락처·저장소·마이크 권한도 요구하지 않습니다.</p>
+
+<h2>9. 아직 없는 것 — 생기면 이 방침을 먼저 고칩니다</h2>
+<div class="wrap"><table>
+<tr><th>무엇</th><th>지금 상태</th></tr>
+<tr><td><strong>인앱 결제</strong></td><td><strong>연동돼 있지 않습니다.</strong> 은화는 앱 안에서만 쓰는 재화이고 기기에만 저장되며, 상점에서 충전을 누르면 "결제 연동은 준비 중"이라는 안내만 나옵니다. 결제 수단 정보는 지금도 앞으로도 본 서비스가 직접 수집하지 않으며, 도입 시 Google Play 결제 시스템이 처리합니다</td></tr>
+<tr><td><strong>분석 · 크래시 수집 도구</strong></td><td>없습니다. 앱에 들어 있는 데이터 수집 SDK 는 <strong>AdMob 1종뿐</strong>입니다</td></tr>
+<tr><td><strong>위치 기반 기능</strong></td><td>없습니다</td></tr>
+</table></div>
+<p>위 항목이 실제로 코드에 들어가는 시점에 <strong>먼저 이 방침과 Play 콘솔 데이터 안전 답변을 함께 갱신한 뒤</strong> 기능을 켭니다.</p>
+
+<h2>10. 정책 변경</h2>
+<p>본 방침이 바뀌면 위 <strong>시행일</strong>을 갱신하고, 바뀐 내용을 이 주소에 게시합니다. 중요한 변경(수집 항목 추가·제3자 제공처 추가)은 앱 안에서도 알립니다.</p>
+</body>
+</html>
