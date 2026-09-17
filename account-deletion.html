@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>계정 삭제 요청</title>
+<style>
+  body { font-family: "Apple SD Gothic Neo", "Malgun Gothic", sans-serif; line-height: 1.7; color: #222; background: #fff; max-width: 760px; margin: 0 auto; padding: 24px 20px 64px; }
+  h1 { font-size: 1.5rem; border-bottom: 2px solid #444; padding-bottom: 8px; }
+  h2 { font-size: 1.15rem; margin-top: 2em; border-left: 4px solid #888; padding-left: 10px; }
+  .meta { color: #555; font-size: 0.9rem; background: #f6f6f6; border-radius: 8px; padding: 12px 16px; }
+  .meta li { margin: 2px 0; }
+  strong { color: #111; }
+  table { border-collapse: collapse; width: 100%; margin: 1em 0; font-size: 0.95rem; }
+  th, td { border: 1px solid #ddd; padding: 8px 10px; text-align: left; vertical-align: top; }
+  th { background: #f6f6f6; color: #111; }
+  code { background: #f2f2f2; border-radius: 4px; padding: 1px 5px; font-size: 0.9em; }
+  .wrap { overflow-x: auto; }
+  .box { background: #fffaf0; border: 1px solid #f0d9a0; border-radius: 8px; padding: 14px 16px; margin: 1em 0; }
+  a.btn { display: inline-block; background: #333; color: #fff; text-decoration: none; padding: 10px 18px; border-radius: 8px; margin-top: 6px; }
+</style>
+</head>
+<body>
+<h1>계정 삭제 요청</h1>
+
+<ul class="meta">
+  <li>앱/서비스명: <strong>도깨비</strong> (구글 플레이 안드로이드 앱)</li>
+  <li>패키지 ID: <code>com.saramui.tarot</code></li>
+  <li>개발자명: <strong>브라이트테일</strong></li>
+  <li>문의: <a href="mailto:love846234@gmail.com">love846234@gmail.com</a></li>
+</ul>
+
+<p>이 페이지는 <strong>도깨비</strong> 앱을 설치하거나 앱에 접속하지 않고도, 연결한 계정과
+그에 딸린 서버 데이터의 삭제를 요청할 수 있는 곳입니다. 앱을 갖고 계신 분은 앱 안의
+[전체 메뉴 → 설정·계정 → 계정 삭제]에서도 같은 처리를 바로 받을 수 있습니다.</p>
+
+<h2>1. 계정 삭제 요청 방법</h2>
+<div class="box">
+  <p>아래 이메일로 <strong>① 가입에 쓰신 방법(Google 또는 Kakao)</strong>과
+  <strong>② 그 계정의 이메일 주소</strong> 두 가지를 적어 보내 주세요.</p>
+  <a class="btn" href="mailto:love846234@gmail.com?subject=%5B%EB%8F%84%EA%B9%A8%EB%B9%84%5D%20%EA%B3%84%EC%A0%95%20%EC%82%AD%EC%A0%9C%20%EC%9A%94%EC%B2%AD&body=%EA%B0%80%EC%9E%85%20%EB%B0%A9%EB%B2%95(Google%20%EB%98%90%EB%8A%94%20Kakao)%3A%20%0A%EA%B3%84%EC%A0%95%20%EC%9D%B4%EB%A9%94%EC%9D%BC%3A%20">love846234@gmail.com 으로 삭제 요청 메일 쓰기</a>
+  <p style="margin-top:10px; font-size:.88rem; color:#665;">본인 확인을 위해 알려주신 이메일로
+  확인 회신을 드릴 수 있습니다. 회신 없이 처리가 끝나면 별도 안내 없이 종료될 수 있습니다.</p>
+</div>
+
+<h2>2. 삭제되는 서버 데이터</h2>
+<p>요청을 확인하면 아래 값을 서버에서 <strong>영구히</strong> 지웁니다(앱 안 삭제와 완전히
+같은 범위입니다):</p>
+<div class="wrap"><table>
+<tr><th>항목</th><th>설명</th></tr>
+<tr><td>이메일 주소</td><td>로그인 시 제공받아 서버에 저장해 둔 값</td></tr>
+<tr><td>이름/닉네임</td><td>로그인 시 제공받아 서버에 저장해 둔 값</td></tr>
+<tr><td>소셜 로그인 고유 ID</td><td>Google 또는 Kakao 계정을 구분하는 값 그 자체</td></tr>
+<tr><td>기기 간 동기화 값</td><td>은화 잔액 · 연속 출석 일수 · 마지막 방문일(로그인한 계정에
+묶어 기기를 바꿔도 이어지게 했던 값)</td></tr>
+</table></div>
+
+<h2>3. 삭제되지 않는 것 — 기기(휴대폰) 안의 데이터</h2>
+<div class="box">
+  <p><strong>상담 기록·고민저장소·인연(별명·관계)·비밀 메모·타로 리딩 기록 등은 계정 삭제와
+  무관합니다.</strong> 이 값들은 로그인 여부와 상관없이 처음부터 <strong>이용자의 기기
+  안에만</strong> 저장되고 저희 서버로 전송된 적이 없기 때문에(개인정보처리방침 3-1항
+  참고), 계정을 삭제해도 서버에서 지울 대상 자체가 없습니다 — 그대로 기기에 남습니다.</p>
+  <p>이 기기 안 데이터까지 함께 지우려면 계정 삭제와는 별개로, 안드로이드 <strong>[설정 →
+  애플리케이션 → 도깨비 → 저장공간 → 데이터 삭제]</strong> 또는 앱 삭제를 이용해 주세요.</p>
+</div>
+
+<h2>4. 요청 처리 방법</h2>
+<p>보내주신 이메일을 사람이 직접 확인하고, 알려주신 로그인 방법·이메일과 일치하는 계정
+기록을 찾아 서버에서 제거합니다. 처리가 끝나면 별도 통지 없이 종료될 수 있으며, 확인이
+필요한 경우 답장으로 다시 안내드립니다.</p>
+
+<h2>5. 다른 개인정보 관련 문의</h2>
+<p>계정 삭제 외의 개인정보 관련 문의도 같은 주소
+(<a href="mailto:love846234@gmail.com">love846234@gmail.com</a>)로 받습니다. 자세한 수집·
+이용·보관 내용은 <a href="privacy_policy.html">개인정보처리방침</a>을 참고해 주세요.</p>
+
+</body>
+</html>
