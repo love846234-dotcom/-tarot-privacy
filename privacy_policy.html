@@ -25,7 +25,7 @@
 <ul class="meta">
   <li>적용 서비스: 도깨비 — 도도한 나를 깨우는 비밀 이야기 (구글 플레이 안드로이드 앱 · 웹 버전)</li>
   <li>패키지 ID: <code>com.saramui.tarot</code></li>
-  <li>시행일: 2026-09-25 (최초 시행 2026-08-28 · 개정 이력은 10항)</li>
+  <li>시행일: 2026-10-03 (최초 시행 2026-08-28 · 개정 이력은 10항)</li>
   <li>문의: <a href="mailto:contact@brighttale.co.kr">contact@brighttale.co.kr</a> · 010-6878-2001</li>
 </ul>
 
@@ -65,6 +65,10 @@
 <tr><td><code>tarotStreakCount</code> · <code>tarotStreakLastDate</code></td><td>연속 접속 일수 · 마지막 접속 날짜</td></tr>
 <tr><td><code>tarotShareAdCount_&lt;날짜&gt;</code></td><td>그날 보상형 광고를 본 횟수(하루 3회 제한 계산용)</td></tr>
 <tr><td><code>tarotPouchBalance</code> · <code>tarotPouchLedger</code> 등 <code>tarotPouch*</code></td><td>복주머니(무료 재화) 잔액 · 적립·소모 내역 최대 20건 · 하루 1회 지급 여부</td></tr>
+<tr><td><code>vg.별</code> · <code>vg.비밀일기</code> · <code>vg.별자리이름</code> · <code>vg.별활동</code> · <code>vg.별.이전</code></td><td><strong>별자리 비밀 일기</strong> — 이용자가 직접 적은 일기 본문(최대 2,000자) · 그날의 기분 · 날짜별 별의 밝기 · 월별 별자리 이름 · 앱을 연 날짜. <strong>서버로 전송되지 않으며 이 기기에만 저장</strong>됩니다.</td></tr>
+<tr><td><code>vg.일기잠금</code></td><td>비밀 일기 잠금 PIN — <strong>PIN 원문은 저장하지 않고</strong> 한 방향 해시(PBKDF2)와 임의 값만 저장합니다. PIN 을 잊으면 운영자도 복구할 수 없습니다.</td></tr>
+<tr><td><code>vg.가방함</code> · <code>vg.방꾸미기</code> · <code>vg.흔적</code> · <code>vg.첫날</code> · <code>vg.소식읽음</code> · <code>vg.루나카드</code> · <code>vg.루나오늘</code> · <code>vg.루나방문</code> · <code>vg.청운방문</code> · <code>vg.책방첫방문</code> · 미니미·옷장 선택 값</td><td><strong>마을 진행과 꾸미기 기록</strong> — 받은 액세서리와 입은 모습 · 내 방 꾸미기 배치 · 마을에서 모은 도감 흔적 · 첫날 진행 단계 · 읽은 소식 · 가게별 방문·오늘 선물 표시. <strong>이 기기에만 저장</strong>되며 서버로 전송되지 않습니다.</td></tr>
+<tr><td><code>vg.지표</code> · <code>vg.지표대기</code> · <code>vg.설치일</code></td><td><strong>기능 사용 횟수 기록</strong>(첫날 완료 · 다음 날 재방문 · 별 만들기 · 일기 쓰기 · 마을 속 장면 탭 · 비밀 이야기 열기 · 보상 광고 시청 완료) — <strong>항목 이름과 시각(보상 광고는 가게 이름 한 칸 추가)만</strong> 기기에 쌓으며, 일기 본문·생년월일·기기 식별값은 담지 않습니다. <strong>서버로 전송하지 않습니다.</strong> 앱 데이터를 지우면 함께 사라집니다.</td></tr>
 <tr><td><code>tarotLetterBoxId</code></td><td>우체통에 편지를 넣을 때 쓰는 <strong>익명 식별자</strong>(임의 문자열 · 이름·이메일과 무관)</td></tr>
 <tr><td><code>tarotInstallToken</code></td><td>처음 AI 풀이·상담을 쓸 때 서버가 발급해 준 <strong>무작위 설치 식별자</strong>(이용 한도 계산용 · 이름·이메일과 무관 · AI 요청마다 서버로 함께 보냅니다 — 3-2)</td></tr>
 <tr><td><code>vg.초대토큰</code> · <code>vg.초대_설치조회함</code></td><td>친구 초대 링크로 들어온 경우 서버가 돌려준 <strong>초대 확인값</strong>(가입 확인이 끝나면 지웁니다)과, 설치 직후 초대 링크로 설치했는지 한 번 확인했다는 표시(3-6)</td></tr>
@@ -74,6 +78,7 @@
 <tr><td><code>ai_base_last_good</code></td><td>지난번에 연결에 성공한 서버 주소(개인정보 아님)</td></tr>
 <tr><td><code>aiConsentV1</code></td><td>AI 전송 동의 화면에서 <strong>동의한 사실과 그 시각</strong>(동의하지 않은 경우는 저장하지 않습니다). 앱 데이터를 지우거나 [전체 메뉴 → 설정·계정]의 [AI 전송 동의 철회]를 누르면 사라지고, 그러면 AI 를 처음 쓸 때 다시 묻습니다</td></tr>
 </table></div>
+<p><strong>별·일기 백업 파일(선택).</strong> 이용자가 [별자리 하늘]에서 직접 [백업 내보내기]를 눌렀을 때에 한해, 별과 일기를 <strong>이용자가 정한 PIN 으로 암호화한 파일</strong>로 만들어 기기의 공유 창으로 넘깁니다. 그 파일을 어디에 보관하거나 보낼지는 이용자가 정하며, <strong>운영자 서버로는 전송되지 않습니다.</strong> 같은 PIN 으로만 다시 불러올 수 있고, PIN 을 잊으면 열 수 없습니다.</p>
 <p>카드를 뽑는 난수, 마을의 NPC·미니미 움직임, 손금·관상 사진의 밝기·대비 보정은 <strong>전부 기기 안에서만</strong> 이루어집니다. 사진 보정은 외부 라이브러리 없이 앱 자체 코드로 처리합니다.</p>
 
 <h3>3-2. 해석을 만들기 위해 서버로 전송되는 것</h3>
@@ -104,6 +109,7 @@
 
 <h3>3-3. 광고 — Google AdMob</h3>
 <p>앱(안드로이드) 버전에는 <strong>Google AdMob</strong> 광고가 들어 있습니다. 웹 버전에는 광고가 없습니다.</p>
+<p><strong>iOS 버전은 맞춤 광고를 위한 추적을 하지 않습니다.</strong> 추적 허용 요청 없이 맞춤형이 아닌(비개인화) 광고만 요청합니다. 아래 표와 처리 항목은 안드로이드 앱의 현재 동작을 기준으로 적었습니다.</p>
 <div class="wrap"><table>
 <tr><th>형태</th><th>언제</th></tr>
 <tr><td>배너</td><td>화면 하단 고정</td></tr>
@@ -192,7 +198,7 @@
 <h2>9. 결제 · 수집 도구 · 위치 — 현재 상태(바뀌면 이 방침을 먼저 고칩니다)</h2>
 <div class="wrap"><table>
 <tr><th>무엇</th><th>지금 상태</th></tr>
-<tr><td><strong>인앱 결제</strong></td><td><strong>광고 제거 상품 하나를 인앱결제로 판매합니다</strong>(Google Play · App Store). 결제는 각 스토어의 결제 시스템이 처리하며, 카드 번호 등 결제 수단 정보는 본 서비스가 수집·저장하지 않습니다. 구매 여부는 스토어가 주는 구매 정보를 바탕으로 이용자의 기기에서 확인하며, 이 구매 정보를 본 서비스 서버로 보내지 않습니다. 은화는 앱 안에서만 쓰는 재화이고 기기에만 저장되며, 돈으로 살 수 없습니다</td></tr>
+<tr><td><strong>인앱 결제</strong></td><td><strong>광고 제거 상품과 루나 주얼리 팩(<code>luna_jewelry_pack</code> · 1,100원 · 한 번 사면 계속 쓰는 상품) 두 가지를 인앱결제로 판매합니다</strong>(Google Play · App Store). 결제는 각 스토어의 결제 시스템이 처리하며, 카드 번호 등 결제 수단 정보는 본 서비스가 수집·저장하지 않습니다. 구매 여부는 스토어가 주는 구매 정보를 바탕으로 이용자의 기기에서 확인하며, 이 구매 정보를 본 서비스 서버로 보내지 않습니다. 은화는 앱 안에서만 쓰는 재화이고 기기에만 저장되며, 돈으로 살 수 없습니다</td></tr>
 <tr><td><strong>분석 · 크래시 수집 도구</strong></td><td>없습니다. 앱에 들어 있는 데이터 수집 SDK 는 <strong>AdMob 1종뿐</strong>입니다</td></tr>
 <tr><td><strong>위치 기반 기능</strong></td><td><strong>정밀 위치(GPS 등)는 수집하지 않습니다.</strong> 앱 자체가 위치 권한을 요구하는 기능은 없습니다(8항). 다만 광고 SDK(AdMob)가 IP 주소를 바탕으로 한 대략적 위치를 광고 목적으로 처리합니다 — 3-3·4항 참고</td></tr>
 </table></div>
@@ -217,6 +223,8 @@
 <li>2026-09-25 — 서버가 운영자 PC 가 아니라 AWS Lightsail 이라는 점을 3-4·5항에 바로잡고, 신고 기록에 접속 IP 를 남기지 않는 것과 웹서버(nginx) 오류 기록의 접속 IP 최대 7일 자동 삭제를 명시(접속 기록은 IP 없는 형식으로 변경).</li>
 <li>2026-09-25 — 친구 초대(3-6항)를 새로 적음: 초대받은 이용자의 기기 식별자(안드로이드 기기 ID)를 서버로 보내 해시로만 저장하는 것, 초대 시도 기록의 계정 삭제 시 또는 1년 후 자동 삭제, 초대 보상 기록. 3-1항 표·4항 표·5항 표에 함께 반영.</li>
 <li>2026-09-25 — 3-3항 AdMob 처리 목적에 [분석]을 명시(Google 이 광고 서비스 제공·개선을 위해 수행 · Google Play 데이터 보안 양식의 수집·공유 목적과 같게 맞춤).</li>
+<li>2026-10-03 — 1.1.0 새 기능을 3-1항에 추가: 별자리 비밀 일기와 PIN 잠금(서버 전송 없음 · 이 기기에만 저장), 사용자가 직접 내보내는 PIN 암호화 백업 파일, 마을 진행·꾸미기 기록, 기능 사용 횟수 기록(기기 안에만 쌓고 전송하지 않음). 새로 서버로 나가는 항목은 없습니다.</li>
+<li>2026-10-03 — 9항 인앱 결제에 루나 주얼리 팩(1,100원 · 한 번 사면 계속 쓰는 상품)을 추가하고, 3-3항에 iOS 버전은 맞춤 광고를 위한 추적을 하지 않고 비개인화 광고만 요청한다는 것을 명시.</li>
 </ul>
 </body>
 </html>
