@@ -1,9 +1,14 @@
 {
   "schema": 1,
-  "version": 2,
+  "version": 3,
   "updatedAt": "2026-09-30T09:40:00+09:00",
   "minAppVersion": "0.1.794",
   "disabled": false,
+  "notice": {
+    "id": "2026-w43-terms",
+    "text": "도깨비 촌장이 알립니다. 이용약관 · 개인정보처리방침 · 환불 안내가 바뀝니다. 10월 24일부터 시행하며, 무료 은화 소멸과 사용 순서는 11월 24일부터 적용합니다. 전문은 love846234-dotcom.github.io/-tarot-privacy 에서 볼 수 있어요.",
+    "until": "2026-10-25"
+  },
   "tests": [
     {
       "id": "t-door-1",
