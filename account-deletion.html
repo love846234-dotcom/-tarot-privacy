@@ -18,17 +18,23 @@
   .wrap { overflow-x: auto; }
   .box { background: #fffaf0; border: 1px solid #f0d9a0; border-radius: 8px; padding: 14px 16px; margin: 1em 0; }
   a.btn { display: inline-block; background: #333; color: #fff; text-decoration: none; padding: 10px 18px; border-radius: 8px; margin-top: 6px; }
+
+  /* A-028 뒤로가기 띠 */
+  body { margin-top: 56px !important; }
+  .legal-bar { position: fixed; top: 0; left: 0; right: 0; height: 52px; background: #fff; border-bottom: 1px solid #ddd; display: flex; align-items: center; z-index: 1000; font-family: "Apple SD Gothic Neo", "Malgun Gothic", sans-serif; }
+  .legal-bar button { width: 48px; height: 48px; min-width: 44px; min-height: 44px; border: 0; background: transparent; font-size: 26px; line-height: 1; color: #222; cursor: pointer; }
+  .legal-bar .legal-title { flex: 1; text-align: center; font-size: 1rem; font-weight: 600; color: #222; padding-right: 48px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
 </style>
 </head>
 <body>
+<div class="legal-bar"><button type="button" onclick="legalBack()" aria-label="뒤로">←</button><div class="legal-title">계정 삭제 요청</div></div>
+
 <h1>계정 삭제 요청</h1>
 <p lang="en"><a href="account-deletion_en.html">English version → account-deletion_en.html</a></p>
 
 <ul class="meta">
   <li>앱/서비스명: <strong>도깨비</strong> — 도도한 나를 깨우는 비밀 이야기 (구글 플레이 안드로이드 앱)</li>
-  <li>패키지 ID: <code>com.saramui.tarot</code></li>
   <li>개발자명: <strong>브라이트테일</strong></li>
-  <li>문의: <a href="mailto:contact@brighttale.co.kr">contact@brighttale.co.kr</a> · 010-6878-2001</li>
 </ul>
 
 <p>이 페이지는 <strong>도깨비</strong> 앱을 설치하거나 앱에 접속하지 않고도, 연결한 계정과
@@ -76,5 +82,14 @@
 (<a href="mailto:contact@brighttale.co.kr">contact@brighttale.co.kr</a>)로 받습니다. 자세한 수집·
 이용·보관 내용은 <a href="privacy_policy.html">개인정보처리방침</a>을 참고해 주세요.</p>
 
+<h2>문의</h2>
+<p>이메일: <a href="mailto:contact@brighttale.co.kr">contact@brighttale.co.kr</a> · 전화: 010-6878-2001</p>
+<script>
+function legalBack(){
+  if (history.length > 1) { history.back(); return; }
+  try { window.close(); } catch (e) {}
+  setTimeout(function () { location.href = 'https://dokkaebi.brighttale.co.kr/'; }, 150);
+}
+</script>
 </body>
 </html>
