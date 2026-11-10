@@ -14,14 +14,20 @@ code{background:var(--box);border-radius:4px;padding:1px 5px;font-size:.9em}
 .box{background:var(--box);border:1px solid var(--line);border-radius:8px;padding:4px 16px 12px;margin:12px 0}
 a.btn{display:inline-block;background:var(--accent);color:var(--bg);text-decoration:none;padding:10px 18px;border-radius:8px;margin-top:6px}
 .wrap{overflow-x:auto}
-</style></head><body><main>
+
+  /* A-028 뒤로가기 띠 */
+  body { margin-top: 56px !important; }
+  .legal-bar { position: fixed; top: 0; left: 0; right: 0; height: 52px; background: #fff; border-bottom: 1px solid #ddd; display: flex; align-items: center; z-index: 1000; font-family: "Apple SD Gothic Neo", "Malgun Gothic", sans-serif; }
+  .legal-bar button { width: 48px; height: 48px; min-width: 44px; min-height: 44px; border: 0; background: transparent; font-size: 26px; line-height: 1; color: #222; cursor: pointer; }
+  .legal-bar .legal-title { flex: 1; text-align: center; font-size: 1rem; font-weight: 600; color: #222; padding-right: 48px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+</style></head><body>
+<div class="legal-bar"><button type="button" onclick="legalBack()" aria-label="Back">←</button><div class="legal-title">Account Deletion Request</div></div>
+<main>
 <h1>Account Deletion Request</h1>
 <p class="note" lang="ko"><a href="account-deletion.html">한국어</a></p>
 <ul class="meta">
 <li>App / service name: <strong>Dokkaebi</strong> (도깨비) — "도도한 나를 깨우는 비밀 이야기" (Google Play Android app)</li>
-<li>Package ID: <code>com.saramui.tarot</code></li>
 <li>Developer: <strong>Brighttale</strong> (브라이트테일)</li>
-<li>Contact: <a href="mailto:contact@brighttale.co.kr">contact@brighttale.co.kr</a> · 010-6878-2001</li>
 </ul>
 <p>This page is where you can request deletion of your linked account and the server data attached to it, without installing the <strong>Dokkaebi</strong> app or opening it. If you have the app, you can get the same processing right away from [Menu → Settings &amp; Account → Delete account] inside the app (전체 메뉴 → 설정·계정 → 계정 삭제).</p>
 <h2>1. How to request account deletion</h2>
@@ -48,4 +54,13 @@ a.btn{display:inline-block;background:var(--accent);color:var(--bg);text-decorat
 <p>A person reads the email you send, finds the account record that matches the sign-in method and email you gave, and removes it from the server. When processing is finished it may be closed without separate notice; if we need to confirm something, we will reply to you again.</p>
 <h2>5. Other privacy inquiries</h2>
 <p>We also receive other privacy-related inquiries besides account deletion at the same address (<a href="mailto:contact@brighttale.co.kr">contact@brighttale.co.kr</a>). For details on what we collect, use and keep, please see the <a href="privacy_policy_en.html">Privacy Policy</a>.</p>
-</main></body></html>
+<h2>Contact</h2>
+<p>Email: <a href="mailto:contact@brighttale.co.kr">contact@brighttale.co.kr</a> · Phone: 010-6878-2001</p>
+</main><script>
+function legalBack(){
+  if (history.length > 1) { history.back(); return; }
+  try { window.close(); } catch (e) {}
+  setTimeout(function () { location.href = 'https://dokkaebi.brighttale.co.kr/'; }, 150);
+}
+</script>
+</body></html>
