@@ -10,12 +10,19 @@ h1{font-size:1.6rem;margin:0 0 8px} h2{font-size:1.15rem;margin:28px 0 8px}
 table{border-collapse:collapse;width:100%;margin:8px 0} th,td{border:1px solid var(--line);padding:8px;text-align:left;vertical-align:top}
 a{color:var(--accent)} .note{color:var(--muted);font-size:.9rem}
 ul.meta{color:var(--muted);font-size:.9rem;border:1px solid var(--line);border-radius:8px;padding:12px 16px 12px 32px}
-</style></head><body><main>
+
+  /* A-028 뒤로가기 띠 */
+  body { margin-top: 56px !important; }
+  .legal-bar { position: fixed; top: 0; left: 0; right: 0; height: 52px; background: #fff; border-bottom: 1px solid #ddd; display: flex; align-items: center; z-index: 1000; font-family: "Apple SD Gothic Neo", "Malgun Gothic", sans-serif; }
+  .legal-bar button { width: 48px; height: 48px; min-width: 44px; min-height: 44px; border: 0; background: transparent; font-size: 26px; line-height: 1; color: #222; cursor: pointer; }
+  .legal-bar .legal-title { flex: 1; text-align: center; font-size: 1rem; font-weight: 600; color: #222; padding-right: 48px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+</style></head><body>
+<div class="legal-bar"><button type="button" onclick="legalBack()" aria-label="Back">←</button><div class="legal-title">Withdrawal (청약철회) and Refund Notice</div></div>
+<main>
 <h1>Withdrawal (청약철회) and Refund Notice</h1>
 <p class="note" lang="ko"><a href="refund.html">한국어</a></p>
 <ul class="meta">
 <li>Seller: Brighttale (브라이트테일) (app Dokkaebi · slogan "도도한 나를 깨우는 비밀 이야기")</li>
-<li>Contact: <a href="mailto:contact@brighttale.co.kr">contact@brighttale.co.kr</a> · 010-6878-2001</li>
 <li>Effective date: October 24, 2026 (announced October 22, 2026)</li>
 </ul>
 <h2>1. Period during which you may withdraw (청약철회를 할 수 있는 기간)</h2>
@@ -56,4 +63,13 @@ ul.meta{color:var(--muted);font-size:.9rem;border:1px solid var(--line);border-r
 <ul class="meta">
 <li>See also: <a href="terms_en.html">Terms of Service</a> · <a href="privacy_policy_en.html">Privacy Policy</a></li>
 </ul>
-</main></body></html>
+<h2>Contact</h2>
+<p>Email: <a href="mailto:contact@brighttale.co.kr">contact@brighttale.co.kr</a> · Phone: 010-6878-2001</p>
+</main><script>
+function legalBack(){
+  if (history.length > 1) { history.back(); return; }
+  try { window.close(); } catch (e) {}
+  setTimeout(function () { location.href = 'https://dokkaebi.brighttale.co.kr/'; }, 150);
+}
+</script>
+</body></html>
