@@ -9,7 +9,15 @@ main{max-width:720px;margin:0 auto;padding:32px 16px 64px}
 h1{font-size:1.6rem;margin:0 0 8px} h2{font-size:1.15rem;margin:28px 0 8px}
 table{border-collapse:collapse;width:100%;margin:8px 0} th,td{border:1px solid var(--line);padding:8px;text-align:left;vertical-align:top}
 a{color:var(--accent)} .note{color:var(--muted);font-size:.9rem}
-</style></head><body><main>
+
+  /* A-028 뒤로가기 띠 */
+  body { margin-top: 56px !important; }
+  .legal-bar { position: fixed; top: 0; left: 0; right: 0; height: 52px; background: #fff; border-bottom: 1px solid #ddd; display: flex; align-items: center; z-index: 1000; font-family: "Apple SD Gothic Neo", "Malgun Gothic", sans-serif; }
+  .legal-bar button { width: 48px; height: 48px; min-width: 44px; min-height: 44px; border: 0; background: transparent; font-size: 26px; line-height: 1; color: #222; cursor: pointer; }
+  .legal-bar .legal-title { flex: 1; text-align: center; font-size: 1rem; font-weight: 600; color: #222; padding-right: 48px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+</style></head><body>
+<div class="legal-bar"><button type="button" onclick="legalBack()" aria-label="Back">←</button><div class="legal-title">Privacy Policy — Dokkaebi</div></div>
+<main>
 <h1>Privacy Policy — Dokkaebi</h1>
 <p class="note" lang="ko"><a href="privacy_policy.html">한국어</a></p>
 <p><strong>Effective date:</strong> November 1, 2026 (Korean version first effective August 28, 2026)</p>
@@ -54,4 +62,11 @@ a{color:var(--accent)} .note{color:var(--muted);font-size:.9rem}
 <h2>10. Changes</h2>
 <p>If we change this policy, we will update the effective date above and tell you in the app.</p>
 <p class="note">Korean version: <a href="privacy_policy.html">개인정보처리방침</a></p>
-</main></body></html>
+</main><script>
+function legalBack(){
+  if (history.length > 1) { history.back(); return; }
+  try { window.close(); } catch (e) {}
+  setTimeout(function () { location.href = 'https://dokkaebi.brighttale.co.kr/'; }, 150);
+}
+</script>
+</body></html>
