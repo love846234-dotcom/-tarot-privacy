@@ -24,15 +24,22 @@
   .fill { border: 2px dashed #c9a227; border-radius: 8px; padding: 10px 16px; margin: 1.2em 0 2em; background: #fffdf5; }
   .fill h2 { margin-top: 0.2em; border-left: none; padding-left: 0; font-size: 1.05rem; }
   a { color: #1a4fa3; }
+
+  /* A-028 뒤로가기 띠 */
+  body { margin-top: 56px !important; }
+  .legal-bar { position: fixed; top: 0; left: 0; right: 0; height: 52px; background: #fff; border-bottom: 1px solid #ddd; display: flex; align-items: center; z-index: 1000; font-family: "Apple SD Gothic Neo", "Malgun Gothic", sans-serif; }
+  .legal-bar button { width: 48px; height: 48px; min-width: 44px; min-height: 44px; border: 0; background: transparent; font-size: 26px; line-height: 1; color: #222; cursor: pointer; }
+  .legal-bar .legal-title { flex: 1; text-align: center; font-size: 1rem; font-weight: 600; color: #222; padding-right: 48px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
 </style>
 </head>
 <body>
+<div class="legal-bar"><button type="button" onclick="legalBack()" aria-label="뒤로">←</button><div class="legal-title">청약철회 · 환불 안내</div></div>
+
 <main id="text">
 <h1>청약철회 · 환불 안내</h1>
 <p lang="en"><a href="refund_en.html">English version → refund_en.html</a></p>
 <ul class="meta">
   <li>판매자: 브라이트테일 (앱 도깨비 · 슬로건 "도도한 나를 깨우는 비밀 이야기")</li>
-  <li>문의: <a href="mailto:contact@brighttale.co.kr">contact@brighttale.co.kr</a> · 010-6878-2001</li>
   <li>시행일: 2026년 10월 24일 (2026-10-22 공지)</li>
 </ul>
 <section>
@@ -82,9 +89,20 @@
 <h2>7. 불만 처리와 분쟁 해결</h2>
 <p class="item">서비스 이용 중 생긴 불만이나 분쟁은 <a href="mailto:contact@brighttale.co.kr">contact@brighttale.co.kr</a> 로 접수해 주시면 지체 없이 처리해 드립니다. 즉시 처리가 어려운 경우에는 사유와 처리 일정을 알려 드립니다. 협의가 이루어지지 않은 경우에는 공정거래위원회 또는 시·도지사에게 분쟁조정을 신청하시거나, 한국소비자원 소비자분쟁조정위원회(www.kca.go.kr, 국번없이 1372)에 조정을 신청하실 수 있습니다.</p>
 </section>
+<section>
+<h2>문의</h2>
+<p class="item">이메일: <a href="mailto:contact@brighttale.co.kr">contact@brighttale.co.kr</a> · 전화: 010-6878-2001</p>
+</section>
 </main>
 <ul class="meta">
   <li>함께 보기: <a href="terms.html">이용약관</a> · <a href="privacy_policy.html">개인정보처리방침</a></li>
 </ul>
+<script>
+function legalBack(){
+  if (history.length > 1) { history.back(); return; }
+  try { window.close(); } catch (e) {}
+  setTimeout(function () { location.href = 'https://dokkaebi.brighttale.co.kr/'; }, 150);
+}
+</script>
 </body>
 </html>
