@@ -1,8 +1,8 @@
 {
-  "latest": "1.1.6.1",
-  "latestCode": 949,
+  "latest": "1.1.9",
+  "latestCode": 1003,
   "minSupported": "0.1.700",
   "minSupportedCode": 700,
   "forceUpdate": false,
-  "updatedAt": "2026-10-30"
+  "updatedAt": "2026-11-27"
 }
